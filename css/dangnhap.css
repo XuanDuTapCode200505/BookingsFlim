@@ -36,6 +36,10 @@ body {
   font-weight: 600;
 }
 
+.header nav a:hover {
+  color: #0099ff;
+}
+
 /* begin login */
 .login {
   display: flex;

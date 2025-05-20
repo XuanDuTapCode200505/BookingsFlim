@@ -35,3 +35,30 @@ body {
   font-size: 18px;
   font-weight: 600;
 }
+
+.header nav a:hover {
+  color: #0099ff;
+}
+
+.service-menu {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 10px 20px;
+}
+
+.service-menu-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-menu-item-content {
+  margin-left: 15px;
+  text-decoration: none;
+  color: #000;
+}
+
+.service-menu-item-content:hover {
+  color: #0099ff;
+}
