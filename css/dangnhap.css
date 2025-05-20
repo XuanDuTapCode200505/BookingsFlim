@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fdf8dd;
+}
+
+.header .logo {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 20px 30px 20px 0;
+}
+
+.header nav {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.header nav a {
+  text-decoration: none;
+  color: #333;
+  font-size: bold;
+  margin-right: 15px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* begin login */
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.col2 {
+  display: flex;
+  width: 800px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.col2-left,
+.col2-right {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.col2-left {
+  background-color: #ffffff;
+}
+
+.col2-right {
+  background-color: #e8f0fe;
+}
+
+.col2-left-content,
+.col2-right-content {
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+p {
+  color: #666;
+}
