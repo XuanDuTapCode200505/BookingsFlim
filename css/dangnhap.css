@@ -20,11 +20,13 @@ body {
   display: inline-block;
   vertical-align: middle;
   margin-right: 20px 30px 20px 0;
+  margin-left: 100px;
 }
 
 .header nav {
   display: inline-block;
   vertical-align: middle;
+  margin-right: 100px;
 }
 
 .header nav a {
