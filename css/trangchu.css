@@ -41,12 +41,22 @@ body {
 .header nav a:hover {
   color: #0099ff;
 }
+/* end header */
 
+/* start service-menu */
 .service-menu {
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   padding: 10px 20px;
+  flex-direction: column;
+}
+
+.service-menu-item {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 20px;
 }
 
 .service-menu-item ul {
@@ -93,12 +103,6 @@ body {
   height: 100%;
 }
 
-.service-menu-item {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
 .service-menu-item-content {
   margin-left: 15px;
   text-decoration: none;
@@ -109,4 +113,101 @@ body {
 
 .service-menu-item-content:hover {
   color: #0099ff;
+}
+/* end service-menu */
+
+/* start service-menu-showslide */
+.service-menu-showslide {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+  position: relative;
+  overflow: hidden;
+  height: 500px;
+}
+
+.service-menu-showslide ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease;
+  position: relative;
+}
+
+.service-menu-showslide ul li {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  flex: 0 0 100%;
+  min-width: 100%;
+  margin: 0;
+  position: relative;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.service-menu-showslide ul li img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Thêm nút điều hướng */
+.service-menu-showslide .prev,
+.service-menu-showslide .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 15px 20px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  z-index: 1;
+  font-size: 18px;
+  transition: background 0.3s ease;
+}
+
+.service-menu-showslide .prev {
+  left: 20px;
+}
+
+.service-menu-showslide .next {
+  right: 20px;
+}
+
+.service-menu-showslide .prev:hover,
+.service-menu-showslide .next:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* Thêm hiệu ứng mờ cho nút */
+.service-menu-showslide .prev::before,
+.service-menu-showslide .next::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.service-menu-showslide .prev:hover::before,
+.service-menu-showslide .next:hover::before {
+  opacity: 1;
 }
