@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="vi">
   <head>
@@ -14,16 +17,22 @@
   <body>
     <div class="header">
       <span class="logo">
+        <a href="trangchu.php">
         <img
           src="https://www.cgv.vn/skin/frontend/cgv/default/images/cgvlogo.png"
           alt="CGV Logo"
         />
+        </a>
       </span>
       <nav>
         <a href="#">Phim</a>
         <a href="#">Rạp CGV</a>
         <a href="#">Thành Viên</a>
-        <a href="dangnhap.html">Đăng Nhập</a>
+        <?php if(isset($_SESSION['user_id'])) { ?>
+            <a href="logout.php">Đăng Xuất</a>
+        <?php } else { ?>
+            <a href="dangnhap.php">Đăng Nhập</a>
+        <?php } ?>
       </nav>
     </div>
     <div class="content">
@@ -49,7 +58,7 @@
               <a href="#" class="service-menu-item-content">News & Offers</a>
             </li>
             <li>
-              <a href="dangky.html" class="service-menu-item-content"
+              <a href="dangky.php" class="service-menu-item-content"
                 >Register now</a
               >
             </li>
@@ -79,7 +88,7 @@
             </li>
             <li>
               <img
-                src="https://iguov8nhvyobj.vcdn.cloud/media/banner/cache/1/b58515f018eb873dafa430b6f9ae0c1e/m/i/mi8_rolling_banner_20-2905.jpg"
+                src="https://iguov8nhvyobj.vcdn.cloud/media/banner/cache/1/b58515f018eb873dafa430b6f9ae0c1e/9/8/980x448px_6.jpg"
                 alt=""
               />
             </li>
@@ -89,4 +98,4 @@
     </div>
     <script src="js/slideshow.js"></script>
   </body>
-</html>
+</html> 
